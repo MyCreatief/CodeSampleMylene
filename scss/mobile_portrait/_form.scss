@@ -1,0 +1,25 @@
+form {
+  float: left;
+  width: 100%;
+}
+
+textarea,
+input,
+label {
+  width: 100%;
+  float: left;
+  margin-bottom: 5px;
+}
+
+textarea,
+input {
+  border: 1px solid $c_border;
+  background: transparent;
+  margin-bottom: 15px;
+  padding: 5px;
+  font-family: hell;
+}
+
+.message {
+ padding: $basic_space 0;
+}

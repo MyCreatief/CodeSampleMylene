@@ -1,0 +1,206 @@
+@include font-face("hell", font-files("/font/HelveticaNeueLTStd-Lt.ttf", "/font/HelveticaNeueLTStd-Lt.otf", "/font/HelveticaNeueLTStd-Lt.eot", "/font/HelveticaNeueLTStd-Lt.svg", "/font/HelveticaNeueLTStd-Lt.otf", "/font/HelveticaNeueLTStd-Lt.woff"));
+
+@function calculate_rem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+@mixin font_size($size) {
+  font-size: $size +px; //Fallback in px
+  font-size: calculate_rem($size);
+}
+
+* {
+  ::-moz-selection {
+    background-color: $c_three;
+    color: $c_six;
+  }
+  ::selection {
+    background-color: $c_three;
+    color: $c_six;
+  }
+}
+
+h1 {
+ @include font_size(18);
+
+  a {
+    text-decoration: none;
+    color: $c_main;
+  }
+}
+
+h2,h3,h4,h5,h6 {
+  padding-top: $basic_space;
+  padding-bottom: $small_space;
+  font-weight: bold;
+  }
+
+h2 {
+  @include font_size(20);
+}
+
+h3 {
+  @include font_size(16);
+}
+
+h4 {
+  @include font_size(14);
+}
+
+h5 {
+  @include font_size(14);
+  color: $c_five;
+}
+
+h6 {
+  @include font_size(14);
+  color: $c_four;
+}
+
+//  Basic link & hover
+a {
+  @include transition();
+  color: $c_two;
+  font-weight: bold;
+
+  &:hover span {
+    width: 100%;
+  }
+
+  &:link,
+  &:visited {
+    @include transition();
+  }
+
+  &:hover,
+  &.active {
+    color: $c_accent;
+  }
+}
+
+.title {
+  @include transition();
+
+  a {
+    @include transition();
+  }
+}
+
+article {
+  float: left;
+  width: 100%;
+}
+
+blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+  line-height: 100%;
+}
+
+blockquote:before {
+  @include font_size(50);
+  color: $c_accent;
+  content: open-quote;
+  line-height: 100%;
+  margin-right: $small_space;
+  vertical-align: middle;
+}
+
+code {
+  width: 100%;
+  float: left;
+  background-color: $white;
+  padding: 8px 12px;
+  border-left: 4px solid $c_accent;
+  word-wrap: break-word;
+  margin-top: $small_space;
+  white-space: pre-wrap;
+}
+
+.small,
+small {
+  @include font_size(12);
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+ol {
+  clear: both;
+  padding: $small_space 0;
+  counter-reset: li;
+}
+
+ol ol {
+  padding-left: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.rectangle-list a {
+  @include transition();
+  position: relative;
+  display: block;
+  padding: .4em .4em .4em .8em;
+  *padding: .4em;
+  margin: .5em 0 .5em 2.5em;
+  background: $c_one;
+  color: $c_six;
+  text-decoration: none;
+}
+
+.rectangle-list a:hover {
+  background: #eee;
+}
+
+.rectangle-list a:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -2.5em;
+  top: 50%;
+  margin-top: -1em;
+  background: $c_two;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.rectangle-list a:after {
+  @include transition();
+  position: absolute;
+  content: '';
+  border: .5em solid transparent;
+  left: -1em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.rectangle-list a:hover:after {
+  left: -.5em;
+  border-left-color: $c_two;
+}

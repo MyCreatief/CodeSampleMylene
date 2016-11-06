@@ -1,0 +1,16 @@
+{
+    "buttons":[
+        {"Name":"button one", "effect":"btn btn_1","subtext":""},
+        {"Name":"button two", "effect":"btn btn_2","subtext":""},
+        {"Name":"button three", "effect":"btn btn_3","subtext":""},
+        {"Name":"button four", "effect":"btn btn_4","subtext":""}
+    ],
+    "links":[
+        {"Name":"brackets", "effect":"link_effect_1","subtext":""},
+        {"Name":"border_up", "effect":"link_effect_2","subtext":""},
+        {"Name":"border down", "effect":"link_effect_3","subtext":""},
+        {"Name":"filling", "effect":"link_effect_5","subtext":""},
+        {"Name":"Dots", "effect":"link_effect_6","subtext":""},
+        {"Name":"border and subtext", "effect":"link_effect_4","subtext":"this one has subtext"}
+    ]
+}

@@ -1,0 +1,19 @@
+.hamburger {
+  display: none;
+}
+
+.header {
+
+  .title {
+    width: auto;
+    float: left;
+  }
+}
+
+.wrong_page,
+section {
+  display: block;
+  max-width: $w_page_size;
+  margin: 0 auto;
+  padding: 0;
+}

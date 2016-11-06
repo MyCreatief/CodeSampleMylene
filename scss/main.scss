@@ -1,0 +1,33 @@
+/***
+      Project imports
+***/
+
+// Imports for compas
+@import "compass";
+
+// Site basic imports
+@import "basics/_settings";
+@import "basics/_normalize";
+@import "basics/_animate.min";
+@import "basics/_colors";
+@import "basics/_typo";
+@import "basics/_hovers";
+
+
+@media  (max-width: 768px) {
+  @import "mobile_portrait/_mobile_nav";
+}
+
+// Styling mobile portait imports
+@import "mobile_portrait/_basic";
+@import "mobile_portrait/_form";
+
+// Styling mobile landscape imports
+// Styling tablet portait imports
+@media  (min-width: 768px) {
+  @import "tablet_portrait/_basic.scss";
+  @import "tablet_portrait/_mobile_nav";
+}
+
+// Styling tablet landscape imports
+// Styling desktop
